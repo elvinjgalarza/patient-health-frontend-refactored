@@ -63,7 +63,7 @@ function login() {
         var patientid = JSON.parse(http.responseText);
 
         if (patientid.id) {
-          sessionStorage.setItem("patientid", patientid);
+          sessionStorage.setItem("patientid", patient_id);
           sessionStorage.setItem("patientusername", username);
         }
 

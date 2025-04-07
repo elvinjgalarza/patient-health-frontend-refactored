@@ -12,6 +12,8 @@ function retrievePatientInformation() {
   var http = new XMLHttpRequest();
 
   http.open("GET", url + "?" + params, true);
+  console.log("Fetching from" + url + "?" + params);
+
 
   http.onreadystatechange = function() {
     if (http.readyState == 4 && http.status == 200) {
@@ -37,6 +39,7 @@ function retrieveDummyData() {
     "appointments": ["2018-01-15 1:00 - Dentist", "2018-02-14 4:00 - Internal Medicine", "2018-09-30 8:00 - Pediatry"]
   }
   fillUI(patientdata);
+  console.log("Dummy data loaded");
 }
 
 function fillUI(patientdata) {
