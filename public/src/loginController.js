@@ -63,11 +63,11 @@ function login() {
         var patientid = JSON.parse(http.responseText);
 
         if (patientid.id) {
-          sessionStorage.setItem("patientid", patientid.id);
+          sessionStorage.setItem("patientid", patientid);
           sessionStorage.setItem("patientusername", username);
         }
 
-        window.location = '/index.html';
+        window.location = '/';
         return;
       }
     }
